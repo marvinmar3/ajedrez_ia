@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://rpm1m6xfa3km"]
+
+[ext_resource type="Script" uid="uid://cpxeu6e1peus5" path="res://Scripts/Main.gd" id="1_rgh2o"]
+[ext_resource type="PackedScene" uid="uid://bcdsm4weg644e" path="res://Scenes/Tablero.tscn" id="2_pbw6q"]
+[ext_resource type="Script" uid="uid://blj0mcvorg466" path="res://Scripts/IAajedrez.gd" id="3_v1gob"]
+[ext_resource type="PackedScene" uid="uid://dxefvxpluci67" path="res://Scenes/PanelRazonamiento.tscn" id="4_jw32o"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_rgh2o")
+
+[node name="Tablero" parent="." instance=ExtResource("2_pbw6q")]
+
+[node name="IAajedrez" type="Node" parent="."]
+script = ExtResource("3_v1gob")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="EtiquetaTurno" type="Label" parent="CanvasLayer"]
+offset_left = 550.0
+offset_top = 20.0
+offset_right = 687.0
+offset_bottom = 43.0
+theme_override_font_sizes/font_size = 24
+text = "⚪️ Turno: Blancas"
+
+[node name="PanelRazonamiento" parent="CanvasLayer" instance=ExtResource("4_jw32o")]

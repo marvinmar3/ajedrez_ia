@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bcdsm4weg644e"]
+
+[ext_resource type="Script" uid="uid://cogoa0ugrfman" path="res://Scripts/Tablero.gd" id="1_2r300"]
+
+[node name="Tablero" type="Node2D"]
+script = ExtResource("1_2r300")
